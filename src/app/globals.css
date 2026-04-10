@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FDFAF5;
+  --color-cream-dark: #F7F1E8;
+  --color-stone-50: #FAFAF9;
+  --color-brown-light: #C9A98C;
+  --color-brown-medium: #9B7355;
+  --color-brown-dark: #5C3D2E;
+  --color-brown-darker: #1E0F08;
+  --color-gold: #C9884A;
+
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-brown-darker);
+
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-inter);
+    @apply antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-brown-light);
+    color: var(--color-cream);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-cormorant);
+  }
+}
